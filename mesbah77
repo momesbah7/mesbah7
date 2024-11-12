@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم طلب الانضمام إلى العشة</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212; /* Dark background */
+            font-family: 'Arial', sans-serif;
+            direction: rtl; /* Right-to-left direction for Arabic text */
+            margin: 0; /* Remove default margin */
+            color: #ffffff; /* White text color */
+        }
+        form {
+            background-color: #1e1e1e; /* Darker form background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 350px; /* Fixed width for the form */
+            text-align: right; /* Align text to the right */
+        }
+        h1 {
+            color: #00bcd4; /* Cyan color for the heading */
+            font-size: 24px; /* Increased font size */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold; /* Bold labels */
+            color: #ffffff; /* White text color for labels */
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #444; /* Dark border */
+            border-radius: 5px;
+            font-size: 14px; /* Consistent font size */
+            background-color: #333; /* Dark background for inputs */
+            color: #ffffff; /* White text color for inputs */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+        }
+        input:focus, textarea:focus {
+            border-color: #00bcd4; /* Change border color on focus */
+            outline: none; /* Remove default outline */
+        }
+        button {
+            background-color: #00bcd4; /* Cyan color for button */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px; /* Increased font size for button */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+        button:hover {
+            background-color: #0097a7; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <form action="https://example.com/submit" method="POST">
+        <h1>تقديم طلب الانضمام إلى العشة</h1>
+        <label for="fullName">الاسم الكامل:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="approval">طلب الموافقة:</label>
+        <textarea id="approval" name="approval" readonly>
+            اقسم بالله العظيم أن أعمل جاهدا لخدمة العشة 
+            أقسم أن احافظ على أسرار العشة وأن تظل أمور العشة في سرية تامة.
+        </textarea>
+        <label>
+            <input type="checkbox" id="agreement" name="agreement" required>
+            أوافق على الشروط المذكورة أعلاه
+        </label>
+
+        <button type="submit">إرسال الطلب</button>
+    </form>
+</body>
+</html>
